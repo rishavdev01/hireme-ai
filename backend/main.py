@@ -9,6 +9,11 @@ from pydantic import BaseModel
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+allow_origins=[
+  "http://localhost:3000",
+  "https://hireme-ai-seven.vercel.app",
+],
+
 load_dotenv()
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 model = "openai/gpt-oss-120b"
